@@ -1,12 +1,14 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 .navbar .nav-link {
     position: relative;
     display: inline-block;
     padding-bottom: 5px; 
     transition: color 0.3s ease-in-out;
 }
+
 .navbar .nav-link:not(.active)::after {
     content: "";
     position: absolute;
@@ -18,15 +20,19 @@ body {
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
 }
+
 .navbar .nav-link:not(.active):hover::after {
     width: 90%;
 }
+
 .navbar .nav-link:not(.active):hover {
     color: #ffffff; 
 }
+
 .navbar .nav-link.active {
     color: #ffffff; 
 }
+
 .navbar .nav-link.active:hover {
     color: #ffffff; 
 }
@@ -60,6 +66,7 @@ body {
 }
 
 .card-body {
+    height: 150px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -67,7 +74,7 @@ body {
     background-color: #0d6efd; /* Primary color */
     color: #fff;
     transition: transform 0.3s ease;
-    transform: translateY(63%);
+    transform: translateY(74%);
 }
 
 .card:hover .card-body {
@@ -77,12 +84,19 @@ body {
 .btn-services {
     display: none;
     position: absolute;
-    bottom: 50%;
-    right: 27%;
+    bottom: 60%;
+    right: 29.5%;
 }
 
 .card:hover .btn-services {
     display: block;
+}
+
+.text-truncate-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 992px) {
