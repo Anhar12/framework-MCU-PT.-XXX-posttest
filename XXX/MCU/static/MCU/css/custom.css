@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+    transition: color 0.3s ease-in-out;
+}
+.navbar .nav-link:not(.active)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+.navbar .nav-link:not(.active):hover::after {
+    width: 90%;
+}
+.navbar .nav-link:not(.active):hover {
+    color: #ffffff; 
+}
+.navbar .nav-link.active {
+    color: #ffffff; 
+}
+.navbar .nav-link.active:hover {
+    color: #ffffff; 
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 50, 0.6); /* Semi-transparent service-overlay */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover .service-overlay {
+    opacity: 1;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0d6efd; /* Primary color */
+    color: #fff;
+    transition: transform 0.3s ease;
+    transform: translateY(63%);
+}
+
+.card:hover .card-body {
+    transform: translateY(0);
+}
+
+.btn-services {
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    right: 27%;
+}
+
+.card:hover .btn-services {
+    display: block;
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar .nav-link:not(.active):hover::after {
+        width: 0%;
+    }
+}

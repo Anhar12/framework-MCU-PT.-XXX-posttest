@@ -1,0 +1,103 @@
+{% extends 'MCU/base.html' %}
+
+{% block title %}Home - MCU PT XXX{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="container col-xxl-8 px-4 py-2">
+    <div class="row flex-sm-col flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-sm-8 col-lg-6">
+            <img src="static/MCU/images/bgHero.png" class="d-block mx-auto img-fluid" alt="Medical Check Up PT XXX"
+                loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-7 fw-bold mb-1">Medical Check Up PT XXX</h1>
+            <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque amet voluptatum ducimus
+                voluptatibus tempora quam accusantium atque assumenda quod commodi aperiam perferendis reiciendis,
+                blanditiis voluptas maxime ipsum! Dignissimos, velit iusto.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="#services" class="btn btn-primary btn-lg px-4 me-md-2 fw-semibold">Our Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Layanan Section -->
+<section id="services" class="py-5 bg-light">
+    <div class="container py-2">
+        <h2 class="text-center mb-4 fw-bold">Our Services</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-5">
+            <div class="card rounded border border-primary" style="width: 18rem;">
+                <img src="static/MCU/images/daftar.png" class="card-img-top" alt="MCU Registration">
+                <div class="service-overlay"></div>
+                <a href="#" class="btn btn-outline-light btn-services">Go somewhere</a>
+                <div class="card-body rounded-bottom bg-primary text-light">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card rounded border border-primary" style="width: 18rem;">
+                <img src="static/MCU/images/pemeriksaan.png" class="card-img-top" alt="MCU Activity">
+                <div class="service-overlay"></div>
+                <a href="#" class="btn btn-outline-light btn-services">Go somewhere</a>
+                <div class="card-body rounded-bottom bg-primary text-light">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card rounded border border-primary" style="width: 18rem;">
+                <img src="static/MCU/images/certificate.png" class="card-img-top" alt="MCU Certificate">
+                <div class="service-overlay"></div>
+                <a href="#" class="btn btn-outline-light btn-services">Go somewhere</a>
+                <div class="card-body rounded-bottom">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimoni Section -->
+<section id="testimonials" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Apa Kata Mereka?</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <p class="card-text">"Pelayanan yang sangat memuaskan, cepat, dan profesional."</p>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex gap-2">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                        </div>
+                        <strong>- Budi Santoso</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <p class="card-text">"Pemeriksaan yang komprehensif dan ramah di kantong."</p>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex gap-2">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                        </div>
+                        <strong>- Indah Pratiwi</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
