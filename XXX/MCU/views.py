@@ -12,3 +12,9 @@ def About(request):
         'about' : True
     }
     return render(request, 'MCU/about.html', context)
+
+def Contact(request):
+    context = {
+        'contact' : True
+    }
+    return render(request, 'MCU/contact.html', context)

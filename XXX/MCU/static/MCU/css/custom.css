@@ -65,7 +65,7 @@ body {
     opacity: 1;
 }
 
-.card-body {
+.card-services {
     height: 150px;
     position: absolute;
     bottom: 0;
@@ -77,7 +77,7 @@ body {
     transform: translateY(74%);
 }
 
-.card:hover .card-body {
+.card:hover .card-services {
     transform: translateY(0);
 }
 
