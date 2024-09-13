@@ -47,7 +47,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
 
 .service-overlay {
@@ -57,7 +57,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 50, 0.6); /* Semi-transparent service-overlay */
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
     opacity: 0;
 }
 
@@ -73,7 +73,7 @@ body {
     right: 0;
     background-color: #0d6efd; /* Primary color */
     color: #fff;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     transform: translateY(74%);
 }
 
@@ -82,14 +82,25 @@ body {
 }
 
 .btn-services {
-    display: none;
+    opacity: 0;
     position: absolute;
     bottom: 60%;
-    right: 29.5%;
+    right: 29.7%;
+    transition: opacity 0.5s ease;
 }
 
 .card:hover .btn-services {
-    display: block;
+    opacity: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.arrow-services {
+    transition: transform 0.4s ease;
+}
+
+.card:hover .arrow-services {
+    transform: rotate(90deg);
+    transition: transform 0.4s ease;
 }
 
 .text-truncate-4 {
@@ -97,6 +108,10 @@ body {
     -webkit-line-clamp: 4; 
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 @media only screen and (max-width: 992px) {

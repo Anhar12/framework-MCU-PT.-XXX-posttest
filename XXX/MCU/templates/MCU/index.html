@@ -5,20 +5,20 @@
 {% block content %}
 
 <!-- Hero Section -->
-<section class="container px-4 py-5">
-    <div class="d-flex flex-column flex-lg-row-reverse justify-content-between align-items-center py-5">
+<section class="px-4 py-5">
+    <div class="container d-flex flex-column flex-lg-row-reverse justify-content-between align-items-center py-5">
         <div class="col-lg-5">
             <img src="static/MCU/images/bgHero.png" class="d-block mx-auto img-fluid mb-2" alt="Medical Check Up PT XXX" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <h1 class="fw-bold mb-1">Medical Check Up PT. XXX</h1>
-            <p class="lead" style="text-align: justify;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque amet voluptatum ducimus
-                voluptatibus tempora quam accusantium atque assumenda quod commodi aperiam perferendis reiciendis,
-                blanditiis voluptas maxime ipsum! Dignissimos, velit iusto.
+            <h1 class="fw-bold mb-1"><span class="text-primary">Your Health</span> Our Priority</h1>
+            <p class="lead mb-1 text-secondary"><i>Comprehensive Medical Check-Up Services at PT. XXX</i></p>
+            <p class="lead mb-1 text-justify">
+                Protect your health and that of your loved ones with our comprehensive and professional medical check-up services. With an experienced medical team and state-of-the-art facilities, we’re here to help you detect, prevent, and manage health issues early. Get your health checked today and secure a healthier future!
             </p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="#services" class="btn btn-primary btn-lg px-4 me-md-2 fw-semibold">See More</a>
+            <div class="d-grid gap-2 d-md-flex justify-content-between align-items-center">
+                <p class="lead mb-1 text-secondary"><i>"Early Detection, Better Life"</i></p>
+                <a class="btn btn-outline-primary btn-lg fw-bold rounded-0" href="#services">Book Now &raquo;</a>
             </div>
         </div>
     </div>
@@ -26,34 +26,47 @@
 
 <!-- Sevices Section -->
 <section id="services" class="py-5 bg-light">
-    <div class="container py-2">
-        <h1 class="text-center mb-4 fw-bold text-primary">Our Services</h1>
+    <div class="container py-5">
+        <h1 class="text-center fw-bold text-primary">OUR SERVICES</h1>
+        <p class="lead mb-5 text-secondary text-center"><i>Comprehensive Medical Check-Up Services at PT. XXX</i></p>
         <div class="d-flex flex-wrap justify-content-center gap-5">
-            <div class="card rounded border" style="width: 18rem;">
+            <div class="card rounded shadow border" style="width: 20rem;">
                 <img src="static/MCU/images/daftar.png" class="card-img-top" alt="MCU Registration">
                 <div class="service-overlay"></div>
-                <a href="#" class="btn px-4 btn-outline-light btn-services">See More</a>
+                <a href="#" class="btn px-4 btn-light btn-services fw-bold">Book Now</a>
                 <div class="card-body rounded-bottom bg-light text-dark p-0">
-                    <h5 class="card-title bg-primary px-3 py-2 text-light text-center fw-bold">Generate Your Certificate</h5>
-                    <p class="card-text text-secondary px-3 pb-2 text-truncate-4" style="text-align: justify;">This Website Will Generate Your MCU Result to Your Own MCU Certificate Automatically</p>
+                    <h5 class="card-title bg-primary p-2 text-light gap-2 fw-bold d-flex align-items-center"> 
+                        <span>
+                            <svg class="text-light arrow-services" width="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" /></svg>
+                        </span> Register Your MCU
+                    </h5>
+                    <p class="card-text text-secondary px-3 pb-2 text-truncate-4 text-justify">Easily registering your medical check-up here. Our efficient registration process can streamline the review process, without any hassle.</p>
                 </div>
             </div>
-            <div class="card rounded border" style="width: 18rem;">
+            <div class="card rounded shadow border" style="width: 20rem;">
                 <img src="static/MCU/images/pemeriksaan.png" class="card-img-top" alt="MCU Activity">
                 <div class="service-overlay"></div>
-                <a href="#" class="btn px-4 btn-outline-light btn-services">See More</a>
+                <a href="#" class="btn px-4 btn-light btn-services fw-bold">Book Now</a>
                 <div class="card-body rounded-bottom bg-light text-dark p-0">
-                    <h5 class="card-title bg-primary px-3 py-2 text-light text-center fw-bold">Generate Your Certificate</h5>
-                    <p class="card-text text-secondary px-3 pb-2 text-truncate-4" style="text-align: justify;">This Website Will Generate Your MCU Result to Your Own MCU Certificate Automatically</p>
+                    <h5 class="card-title bg-primary p-2 text-light gap-2 fw-bold d-flex align-items-center"> 
+                        <span>
+                            <svg class="text-light arrow-services" width="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" /></svg>
+                        </span> Complete Your Examination
+                    </h5>
+                    <p class="card-text text-secondary px-3 pb-2 text-truncate-4 text-justify">Get a professional, comprehensive medical examination in our state-of-the-art facilities to ensure you receive the highest quality care.</p>
                 </div>
             </div>
-            <div class="card rounded border" style="width: 18rem;">
+            <div class="card rounded shadow border" style="width: 20rem;">
                 <img src="static/MCU/images/certificate.png" class="card-img-top" alt="MCU Certificate">
                 <div class="service-overlay"></div>
-                <a href="#" class="btn px-4 btn-outline-light btn-services">See More</a>
+                <a href="#" class="btn px-4 btn-light btn-services fw-bold">Book Now</a>
                 <div class="card-body rounded-bottom bg-light text-dark p-0">
-                    <h5 class="card-title bg-primary px-3 py-2 text-light text-center fw-bold">Generate Your Certificate</h5>
-                    <p class="card-text text-secondary px-3 pb-2 text-truncate-4" style="text-align: justify;">This Website Will Generate Your MCU Result to Your Own MCU Certificate Automatically</p>
+                    <h5 class="card-title bg-primary p-2 text-light gap-2 fw-bold d-flex align-items-center"> 
+                        <span>
+                            <svg class="text-light arrow-services" width="20px" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" /></svg>
+                        </span> Generate Your Certificate
+                    </h5>
+                    <p class="card-text text-secondary px-3 pb-2 text-truncate-4 text-justify">You can generate your medical check-up result to your own medical check-up certificate automatically</p>
                 </div>
             </div>
         </div>
@@ -62,12 +75,13 @@
 
 <!-- Testimoni Section -->
 <section id="testimonials" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4 fw-bold">Apa Kata Mereka?</h2>
+    <div class="container py-5">
+        <h2 class="text-center fw-bold text-primary">OUR TESTIMONIALS</h2>
+        <p class="lead mb-5 text-secondary text-center"><i>What Our Clients Say</i></p>
         <div class="row g-4">
             <div class="col-md-6">
                 <div class="card p-4">
-                    <p class="card-text">"Pelayanan yang sangat memuaskan, cepat, dan profesional."</p>
+                    <p class="card-text text-truncate-4 text-justify">"From the moment I registered for my medical check-up, the process was seamless. The staff was professional, and the examination was thorough. I received my medical certificate quickly, and the entire experience exceeded my expectations."</p>
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-2">
                             <i class="fa fa-star text-primary"></i>
@@ -82,7 +96,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card p-4">
-                    <p class="card-text">"Pemeriksaan yang komprehensif dan ramah di kantong."</p>
+                    <p class="card-text text-truncate-4 text-justify">"The medical team at PT. XXX was incredibly attentive and made the check-up process so comfortable. Their facilities are top-notch, and I felt reassured knowing I was in good hands. I would definitely recommend their services to anyone seeking a comprehensive health assessment."</p>
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-2">
                             <i class="fa fa-star text-primary"></i>
