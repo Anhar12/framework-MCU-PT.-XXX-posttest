@@ -1,4 +1,4 @@
 # Medical Check Up - PT. XXX
 
-### Created By
+Created By
 # Anhar Khoirun Najib (2109106081)
