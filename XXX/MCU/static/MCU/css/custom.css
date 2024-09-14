@@ -115,6 +115,10 @@ body {
     transition: box-shadow 0.4s ease
 }
 
+footer a.nav-link:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 992px) {
     .navbar .nav-link:not(.active):hover::after {
         width: 0%;
