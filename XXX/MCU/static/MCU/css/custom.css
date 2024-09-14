@@ -29,14 +29,6 @@ body {
     color: #ffffff; 
 }
 
-.navbar .nav-link.active {
-    color: #ffffff; 
-}
-
-.navbar .nav-link.active:hover {
-    color: #ffffff; 
-}
-
 .card {
     position: relative;
     overflow: hidden;
