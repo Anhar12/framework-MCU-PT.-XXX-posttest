@@ -2,6 +2,32 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.bg-primary {
+    background: rgb(14 165 233) !important;
+}
+
+.text-primary {
+    color: rgb(14 165 233) !important;
+}
+
+.border-primary {
+    border-color: rgb(14 165 233) !important;
+}
+
+.btn-outline-primary {
+    border-color: rgb(14 165 233) !important;
+    color: rgb(14 165 233) !important;
+}
+
+.btn-outline-primary:hover {
+    background: rgb(14 165 233) !important;
+    color: var(--bs-light) !important;
+}
+
+.btn-outline-light:hover {
+    color: rgb(14 165 233) !important; 
+}
+
 .navbar .nav-link {
     position: relative;
     display: inline-block;
@@ -63,7 +89,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #0d6efd; /* Primary color */
+    background-color: rgb(14 165 233); /* Primary color */
     color: #fff;
     transition: transform 0.4s ease;
     transform: translateY(74%);
@@ -107,7 +133,7 @@ body {
 }
 
 .shadow-btn {
-    box-shadow: -2px 3px 0 0 #0D6EFD;
+    box-shadow: -2px 3px 0 0 rgb(14 165 233);
 }
 
 .shadow-btn:hover {
