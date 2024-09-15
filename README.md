@@ -5,13 +5,13 @@ Created By Anhar Khoirun Najib (2109106081)
 
 # POSTTEST 1
 ## Home Page
-![Home](https://github.com/user-attachments/assets/6bd42be2-cb84-4fa3-8c8d-cee9e102fe62)
+![Home](https://github.com/user-attachments/assets/cdd4abfb-0571-4fca-a525-53bc3c8aeb25)
 
 ## About Page
-![About](https://github.com/user-attachments/assets/1aecad58-2f57-436a-a3a0-2024b2d97095)
+![About](https://github.com/user-attachments/assets/01256f56-fc58-4d0b-b8f1-b8185acc50dc)
 
 ## Contact Page
-![Contact](https://github.com/user-attachments/assets/4af2b108-6266-4e94-a623-15caae5a0cb5)
+![Contact](https://github.com/user-attachments/assets/974a84a4-8b3d-4c4f-8ac2-094cfa51f026)
 
 # How to get this project?
 *follow the command below with your terminal/cmd/git bash*
