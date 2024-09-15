@@ -1,5 +1,4 @@
-# Medical Check Up - PT. XXX
-langsung buka disini kalo ndak erorr ya: xxx.annar.my.id
+# [Medical Check Up - PT. XXX](http://xxx.annar.my.id)
 
 Created By Anhar Khoirun Najib (2109106081)
 
