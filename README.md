@@ -1,9 +1,8 @@
 # Medical Check Up - PT. XXX
 
-Created By
-# Anhar Khoirun Najib (2109106081)
+Created By Anhar Khoirun Najib (2109106081)
 
-## POSTTEST 1
+# POSTTEST 1
 ## Home Page
 ![Home](https://github.com/user-attachments/assets/6bd42be2-cb84-4fa3-8c8d-cee9e102fe62)
 
