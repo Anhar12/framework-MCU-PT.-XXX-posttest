@@ -1,4 +1,4 @@
-{% extends "MCU/base.html" %}
+{% extends "MCU/layout/base.html" %}
 
 {% block title %}
 About - Medical Check UP PT XXX
@@ -7,7 +7,7 @@ About - Medical Check UP PT XXX
 {% block content %}
 
 <!-- AboutUs start -->
-<section id="about-us" class="py-5">
+<section id="about-us" class="pb-5 pt-4">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6">
@@ -54,12 +54,12 @@ About - Medical Check UP PT XXX
 <!-- WhyChooseUs start -->
 <section id="why-choose-us" class="py-5 bg-light">
     <div class="container py-5">
-        <h1 class="text-center fw-bold text-primary">WHY CHOOSE US?</h1>
-        <p class="lead mb-5 text-secondary text-center">Medical Check-Up Services at PT. XXX</p>
+        <h2 class="text-center fw-bold text-primary">WHY CHOOSE US?</h2>
+        <p class="lead mb-5 text-secondary text-center"><i>Medical Check-Up Services at PT. XXX</i></p>
         <div class="d-flex flex-wrap justify-content-center gap-5">
             <div class="card shadow-btn border border-primary" style="width: 18rem;">
                 <div class="d-flex justify-content-center pt-5 pb-4">
-                    <i class="fa-solid fa-user-doctor" style="font-size: 100px; color: #FCB316;"></i>
+                    <i class="fa-solid fa-user-doctor text-warning" style="font-size: 100px;"></i>
                 </div>
                 <div class="card-body px-3 py-2">
                     <h5 class="card-title py-3 m-0 text-dark border-bottom text-center fw-bold">Professionals</h5>
@@ -70,7 +70,7 @@ About - Medical Check UP PT XXX
             </div>
             <div class="card shadow-btn border border-primary" style="width: 18rem;">
                 <div class="d-flex justify-content-center pt-5 pb-4">
-                    <i class="fa-solid fa-microchip" style="font-size: 100px; color: #FCB316;"></i>
+                    <i class="fa-solid fa-microchip text-warning" style="font-size: 100px;"></i>
                 </div>
                 <div class="card-body px-3 py-2">
                     <h5 class="card-title py-3 m-0 text-dark border-bottom text-center fw-bold">Cutting-Edge Technology</h5>
@@ -81,7 +81,7 @@ About - Medical Check UP PT XXX
             </div>
             <div class="card shadow-btn border border-primary" style="width: 18rem;">
                 <div class="d-flex justify-content-center pt-5 pb-4">
-                    <i class="fa-solid fa-users" style="font-size: 100px; color: #FCB316;"></i>
+                    <i class="fa-solid fa-users text-warning" style="font-size: 100px;"></i>
                 </div>
                 <div class="card-body px-3 py-2">
                     <h5 class="card-title py-3 m-0 text-dark border-bottom text-center fw-bold">Customer-Centered</h5>
@@ -96,7 +96,7 @@ About - Medical Check UP PT XXX
 <!-- WhyChooseUs end -->
 
 <!-- Testimoni start -->
-{% include 'MCU/testimonials.html' %}
+{% include 'MCU/layout/testimonials.html' %}
 <!-- Testimoni end -->
 
 {% endblock %}

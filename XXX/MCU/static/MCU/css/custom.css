@@ -1,7 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* bootstrap custom start */
 .bg-primary {
     background: rgb(14 165 233) !important;
 }
@@ -28,11 +29,42 @@ body {
     color: rgb(14 165 233) !important; 
 }
 
+.btn-primary {
+    background: rgb(14 165 233) !important;
+    border: rgb(14 165 233) !important;
+}
+
+.btn-primary:hover {
+    background: rgb(2 132 199) !important;
+    border: rgb(2 132 199) !important;
+}
+
+.text-warning {
+    color: #FCB316 !important;
+}
+
+.btn-close {
+    filter: invert(1) !important;
+}
+/* bootstrap custom end */
+
+/* nav start */
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
 .navbar .nav-link {
     position: relative;
     display: inline-block;
     padding-bottom: 5px; 
+    color: rgb(125 211 252) !important;
     transition: color 0.3s ease-in-out;
+
+}
+
+.navbar .nav-item .active {
+    color: rgb(14 165 233) !important;
 }
 
 .navbar .nav-link:not(.active)::after {
@@ -40,7 +72,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px; 
-    background-color: white; 
+    background-color: rgb(14 165 233); 
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -52,9 +84,50 @@ body {
 }
 
 .navbar .nav-link:not(.active):hover {
-    color: #ffffff; 
+    color: rgb(14 165 233) !important; 
 }
 
+#sidebar {
+    width: 300px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1100;
+}
+
+#sidebar.show {
+    transform: translateX(0);
+}
+
+#sidebar .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; 
+    color: rgb(125 211 252) !important;
+    transition: color 0.5s ease-in-out;
+
+}
+
+#sidebar .nav-item .active {
+    color: #fff !important;
+}
+
+#sidebar .nav-link:not(.active):hover {
+    color: #fff !important; 
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1099;
+    transition: opacity 0.5s ease;
+}
+/* nav end */
+
+/* home start */
 .card {
     position: relative;
     overflow: hidden;
@@ -140,13 +213,114 @@ body {
     box-shadow: none;
     transition: box-shadow 0.4s ease
 }
+/* home end */
 
+/* footer */
 footer a.nav-link:hover {
     text-decoration: underline;
 }
+/* footer */
 
-@media only screen and (max-width: 992px) {
+/* sign in start */
+.form-group {
+    position: relative;
+    margin: 0.9rem 0;
+    transition: all 0.3s ease;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none; 
+    border-color: rgb(14 165 233); 
+}
+
+.form-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #6c757d;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    top: -22px;
+    left: 0rem;
+    font-size: 0.8rem;
+    color: rgb(14 165 233);
+}
+
+.form-label {
+    cursor: text;
+}
+
+.form-check {
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+.form-check-input {
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-check-input:checked {
+    background-color: rgb(2 132 199); 
+    border-color: rgb(2 132 199); 
+}
+
+.form-check-input:checked + .form-check-label::before {
+    background-color: rgb(2 132 199); 
+}
+
+#hero-portal {
+    z-index: 5;
+}
+
+#btn-change:hover {
+    color: rgb(2 132 199) !important;
+}
+
+.transition {
+    transition: all 0.5s ease;
+}
+
+.hero-left {
+    transform: translateX(0);
+}
+
+.form-right {
+    transform: translateX(0);
+}
+
+.hero-right {
+    transform: translateX(100%);
+}
+
+.form-left {
+    transform: translateX(-100%);
+}
+
+/* sign in end */
+
+@media only screen and (max-width: 768px) {
     .navbar .nav-link:not(.active):hover::after {
         width: 0%;
+    }
+
+    #portal {
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }

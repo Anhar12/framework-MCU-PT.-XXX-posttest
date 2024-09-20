@@ -1,3 +1,3 @@
-from django.db import models
-
-# Create your models here.
+from .models.Regis import Regis
+from .models.Result import Result
+from .models.Users import Users

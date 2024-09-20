@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="static/MCU/images/Logo.ico">
+
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'MCU/css/custom.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- nav start -->
+    {% include 'MCU/layout/nav.html' %}
+    <!-- nav end -->
+
+    <!-- main -->
+    <main class="flex-grow-1 mt-5">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    {% include 'MCU/layout/footer.html' %}
+    <!-- footer start -->
+
+    {% bootstrap_javascript %}
+</body>
+
+</html>
