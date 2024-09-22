@@ -32,14 +32,12 @@ class Command(BaseCommand):
             email = fake.unique.email()
             username = fake.user_name()
             password = fake.password()
-            gender = random.choice([Users.LAKILAKI, Users.PEREMPUAN])
             role = random.choice([Users.USER, Users.DOCTOR])
 
             user = Users.objects.create(
                 email=email,
                 username=username,
                 password=password,
-                gender=gender,
                 role=role
             )
             if role == Users.DOCTOR:
@@ -53,7 +51,7 @@ class Command(BaseCommand):
             user = random.choice(user_roles)  
             no_antrean = random.randint(1, 100)
             date = fake.date_between(start_date='-1y', end_date='today')
-            is_done = False  
+            is_done = False
 
             regis_entry = Regis.objects.create(
                 id_user=user,

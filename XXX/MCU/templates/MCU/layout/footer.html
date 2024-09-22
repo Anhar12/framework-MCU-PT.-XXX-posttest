@@ -1,5 +1,4 @@
-{% if not portal %}
-<footer class="py-4 bg-primary">
+<footer id="footer" class="py-4 bg-primary {% if portal or DoctorManagement %} d-none {% endif %}">
     <div class="container">
         <div class="d-flex flex-md-row flex-column py-3 border-bottom gap-5 justify-content-between mb-4">
             <div class="mb-3 d-flex justify-content-center align-items-center">
@@ -87,4 +86,3 @@
         </div>
     </div>
 </footer>
-{% endif %}

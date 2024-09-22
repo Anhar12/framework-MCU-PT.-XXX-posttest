@@ -88,7 +88,7 @@ Portal - Medical Check UP PT XXX
 
 {% include "MCU/layout/modal.html" with modal_id="failed-modal" modal_title="Failed" modal_message="" modal_button_class="btn-danger" modal_header_class="bg-danger" btn_modal_ok="btn-failed-ok"%}
 
-{% include "MCU/layout/modal.html" with modal_id="success-modal" modal_title="Success" modal_message="" modal_button_class="btn-primary" modal_header_class="bg-primary" btn_modal_ok="btn-success-ok" btn_modal_cancel="btn-success-cancel" modal_success=True%}
+{% include "MCU/layout/modal.html" with modal_id="success-modal" modal_title="Success" modal_message="" modal_button_class="btn-success" modal_header_class="bg-success" btn_modal_ok="btn-success-ok" btn_modal_cancel="btn-success-cancel" modal_success=True%}
 
 <script>
     let isIn = true;
@@ -246,7 +246,14 @@ Portal - Medical Check UP PT XXX
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.href = '{% url "home" %}';
+                if (data.is_staff){
+                    window.location.href = '{% url "doctor_management" %}';
+                }
+                else if (data.role === 1) {
+                    window.location.href = '{% url "dashboard_doctor" %}';
+                } else {
+                    window.location.href = '{% url "dashboard_user" %}';
+                }
             } else {
                 showModal('failed-modal', data.error);
             }

@@ -20,4 +20,4 @@ class Result(models.Model):
     notes = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"Result for {self.id_mcu_regis.no_antrean} - Doctor: {self.id_doctor.email}"
+        return f"Result for {self.id_mcu_regis.id_user.username} - Doctor: {self.id_doctor.username}"
