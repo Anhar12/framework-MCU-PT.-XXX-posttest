@@ -32,11 +32,21 @@ class ResultAdmin(admin.ModelAdmin):
     list_display = ('id_mcu_regis', 'id_doctor', 'result', 'no_document', 'date')
     search_fields = ('id_mcu_regis__id_user__email', 'id_doctor__email', 'no_document')
     list_filter = ('result', 'date')
-    
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "id_mcu_regis":
-            if request.resolver_match.url_name == 'add':
+            if 'add' in request.path:
                 kwargs["queryset"] = Regis.objects.filter(is_done=False)
             else:
                 kwargs["queryset"] = Regis.objects.all()
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+    def get_fields(self, request, obj=None):
+        if 'add' in request.path:
+            return ('id_mcu_regis', 'id_doctor', 'result', 'notes')
+        return ('id_mcu_regis', 'id_doctor', 'result', 'no_document', 'date', 'notes')
+
+    def get_readonly_fields(self, request, obj=None):
+        if 'add' in request.path:
+            return ()
+        return ('no_document', 'date')
