@@ -35,12 +35,40 @@ Created By Anhar Khoirun Najib (2109106081)
 ![Result](https://github.com/user-attachments/assets/b744d0fb-b5e1-45f3-a293-d4b587bea44f)
 
 # POSTTEST 3
-## Table Users
-- # Form 
+## Table Userss
+- ### Form 
 ![form users](https://github.com/user-attachments/assets/f5191baa-30a7-4ba7-bb15-619d5263e2d8)
-- # Record
+- ### Record
 ![users](https://github.com/user-attachments/assets/6acd4c03-fa9e-4d59-b476-75fc1ea9b7c1)
 
+## Table Regis
+- ### Form
+![form regis](https://github.com/user-attachments/assets/36ff091d-9d10-4196-9751-f31e867835d3)
+- ### Record
+![regis](https://github.com/user-attachments/assets/8e5df47a-22c6-4004-8ad3-ec9449011796)
+
+## Table Results
+- ### Form
+![form result](https://github.com/user-attachments/assets/01d46fdb-c663-4f16-9762-4422fe1a8299)
+- ### Record
+![result](https://github.com/user-attachments/assets/595d31bf-0d8a-499e-ac1c-d979a5066216)
+
+## Custom Function
+- Otomatis generate no antrean pada table Regis berdasarkan date pada saat menambah data Regis
+- Otomatis generate no document pada table Results berdasarkan date dan count pada saat menambah data Results
+- Otomatis set field is done pada table Regis menjadi True apabila data regis dihubungkan sebagai FK pada saat menambah data Results
+
+## Static
+- static/MCU/images/bgHero.png
+- static/MCU/images/certificate.png
+- static/MCU/images/daftar.png
+- static/MCU/images/logo.ico
+- static/MCU/images/logoLight.png
+- static/MCU/images/logoPrimary.png
+- static/MCU/images/pemeriksaan.png
+- static/MCU/images/signin-hero.png
+- static/MCU/images/signup-hero.png
+- static/MCU/css/custom.css
 
 # How to get this project?
 *follow the command below with your terminal/cmd/git bash*
