@@ -34,12 +34,14 @@ class Command(BaseCommand):
         
         for _ in range(num_users):
             email = fake.unique.email()
-            username = fake.user_name()
+            first_name = fake.first_name()
+            last_name = fake.last_name()
             password = fake.password()
             
             user = Users.objects.create(
                 email=email,
-                username=username,
+                first_name=first_name,
+                last_name=last_name,
                 password=password,
                 role=Users.USER
             )
@@ -48,13 +50,14 @@ class Command(BaseCommand):
         
         for _ in range(num_doctors):
             email = fake.unique.email()
-            username = fake.user_name()
+            first_name = fake.first_name()
+            last_name = fake.last_name()
             password = fake.password()
             
             doctor = Users.objects.create(
                 email=email,
-                username=username,
-                password=password,
+                first_name=first_name,
+                last_name=last_name,
                 role=Users.DOCTOR
             )
             
@@ -79,7 +82,7 @@ class Command(BaseCommand):
             
             regis_entry = random.choice(available_regis)
             doctor = random.choice(doctors)  
-            result = random.choice([Result.NORMAL, Result.ABNORMAL])
+            result = random.choice([Result.P1, Result.P2, Result.P3, Result.P4, Result.P5, Result.P6, Result.P7])
             notes = fake.text()
             start_date = regis_entry.date
             date = fake.date_between(start_date=start_date, end_date='+1y')

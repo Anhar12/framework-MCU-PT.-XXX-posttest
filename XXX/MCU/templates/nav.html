@@ -6,20 +6,22 @@
             </span>
             MCU PT. XXX
         </a>
+
         <button id="openSideBar" class="navbar-toggler text-primary" type="button">
             <span class="fs-"><i class="fas fa-bars"></i></span>  
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto me-3 gap-2">
-                {% if request.session.is_staff %}
+                <!-- {% if request.session.is_staff %}
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if DoctorManagement %}active{% endif %}" href="{% url 'doctor_management' %}">
+                        <a class="nav-link fw-semibold {% if section == 'DoctorManagement' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-user-doctor me-1"></i> Doctor Management
                         </a>
                     </li>
                 {% elif request.session.user_role == 1 %}
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if DashboardDoctor %}active{% endif %}" href="{% url 'dashboard_doctor' %}">
+                        <a class="nav-link fw-semibold {% if section == 'DashboardDoctor' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-briefcase-medical me-1"></i> Dashboard
                         </a>
                     </li>
@@ -30,50 +32,49 @@
                     </li>
                 {% elif request.session.user_role == 2 %}
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if DashboardUser %}active{% endif %}" href="{% url 'dashboard_user' %}">
+                        <a class="nav-link fw-semibold {% if section == 'DashboardUser' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-briefcase-medical me-1"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if 1 == 2 %}active{% endif %}" href="{% url 'belum' %}">
+                        <a class="nav-link fw-semibold {% if section == 'history' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-file-medical me-1"></i> History MCU
                         </a>
                     </li>
-                {% else %}
+                {% else %} -->
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if home %}active{% endif %}" href="{% url 'home' %}">
+                        <a class="nav-link fw-semibold {% if section == 'home' %} active {% endif %}" href="{% url 'home' %}">
                             <i class="fas fa-home me-1"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
-                    </li>
-                        <a class="nav-link fw-semibold {% if about %}active{% endif %}" href="{% url 'about' %}">
+                        <a class="nav-link fw-semibold {% if section == 'about' %} active {% endif %}" href="{% url 'about' %}">
                             <i class="fas fa-info-circle me-1"></i> About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if contact %}active{% endif %}" href="{% url 'contact' %}">
+                        <a class="nav-link fw-semibold {% if section == 'contact' %} active {% endif %}" href="{% url 'contact' %}">
                             <i class="fas fa-phone me-1"></i> Contact
                         </a>
                     </li>
-                {% endif %}
-                
+                <!-- {% endif %} -->
+            </ul>          
+            
+            <ul class="navbar-nav ms-auto me-3 gap-2">          
                 {% if request.session.user_id %}
-                <li class="nav-item">
-                    <span class="me-2 border-start border-primary border-2"></span>
-                    <a class="nav-link fw-semibold" href="{% url 'sign_out' %}">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#">
                             Sign Out <i class="fa-solid fa-arrow-right-from-bracket ms-2"></i>
                         </a>
                     </li>
-                    {% else %}
+                {% else %}
                     <li class="nav-item">
-                        <span class="me-2 border-start border-primary border-2"></span>
-                        <a class="nav-link fw-semibold {% if portal %}active{% endif %}" href="{% url 'portal' %}">
+                        <a class="nav-link fw-semibold {% if section == 'signIn' %}active{% endif %}" href="{% url 'signIn' %}">
                             Sign In<i class="fas fa-arrow-right-to-bracket ms-2"></i>
                         </a>
                     </li>
                 {% endif %}
-            </ul>            
+            </ul>          
         </div>
     </div>
 </nav>
@@ -94,45 +95,45 @@
             <ul class="navbar-nav d-flex flex-column gap-3 mt-3 w-100 px-3">
                 {% if request.session.is_staff %}
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if DoctorManagement %}active{% endif %}" href="{% url 'doctor_management' %}">
+                        <a class="nav-link fw-semibold {% if section == 'DoctorManagement' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-user-doctor me-1"></i> Doctor Management
                         </a>
                     </li>
                 {% elif request.session.user_role == 1 %}
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if DashboardDoctor %}active{% endif %}" href="{% url 'dashboard_doctor' %}">
+                        <a class="nav-link fw-semibold {% if section == 'DoctorManagement' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-briefcase-medical me-1"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if 1 == 2 %}active{% endif %}" href="{% url 'belum' %}">
+                        <a class="nav-link fw-semibold {% if section == 'activity' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-file-medical me-1"></i> MCU Activity
                         </a>
                     </li>
                 {% elif request.session.user_role == 2 %}
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if DashboardUser %}active{% endif %}" href="{% url 'dashboard_user' %}">
+                        <a class="nav-link fw-semibold {% if section == 'DashboardUser' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-briefcase-medical me-1"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-semibold {% if 1 == 2 %}active{% endif %}" href="{% url 'belum' %}">
+                        <a class="nav-link fw-semibold {% if section == 'history' %}active{% endif %}" href="{% url 'belum' %}">
                             <i class="fas fa-file-medical me-1"></i> History MCU
                         </a>
                     </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold {% if home %}active{% endif %}" href="{% url 'home' %}">
+                    <a class="nav-link fw-semibold {% if section == 'home' %}active{% endif %}" href="{% url 'home' %}">
                         <i class="fas fa-home me-1"></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold {% if about %}active{% endif %}" href="{% url 'about' %}">
+                    <a class="nav-link fw-semibold {% if section == 'about' %}active{% endif %}" href="{% url 'about' %}">
                         <i class="fas fa-info-circle me-1"></i> About
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold {% if contact %}active{% endif %}" href="{% url 'contact' %}">
+                    <a class="nav-link fw-semibold {% if section == 'contact' %}active{% endif %}" href="{% url 'contact' %}">
                         <i class="fas fa-phone me-1"></i> Contact
                     </a>
                 </li>
@@ -143,13 +144,13 @@
         <ul class="navbar-nav d-flex flex-column w-100 border-top boder-light pt-2 px-3">
             {% if request.session.user_id %}
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="{% url 'sign_out' %}">
+                    <a class="nav-link fw-semibold" href="#">
                         Sign Out <i class="fa-solid fa-arrow-right-from-bracket ms-2"></i>
                     </a>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold {% if portal %}active{% endif %}" href="{% url 'portal' %}">
+                    <a class="nav-link fw-semibold {% if section == 'signIn' %}active{% endif %}" href="{% url 'signIn' %}">
                         Sign In <i class="fas fa-arrow-right-to-bracket ms-2"></i>
                     </a>
                 </li>

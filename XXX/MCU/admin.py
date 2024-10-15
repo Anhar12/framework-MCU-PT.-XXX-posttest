@@ -5,18 +5,18 @@ from .models import Users, Regis, Result
 class UserAdmin(BaseUserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('username', 'role')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'role')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login',)}),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'username', 'password1', 'password2', 'role'),
+            'fields': ('email', 'first_name', 'last_name', 'password1', 'password2', 'role'),
         }),
     )
-    list_display = ('email', 'username', 'role','is_staff', 'is_superuser')
-    search_fields = ('email', 'username')
+    list_display = ('email', 'first_name', 'last_name', 'role', 'is_staff', 'is_superuser')
+    search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email',)
 
 admin.site.register(Users, UserAdmin)
@@ -30,8 +30,8 @@ class RegisAdmin(admin.ModelAdmin):
 @admin.register(Result)
 class ResultAdmin(admin.ModelAdmin):
     list_display = ('id_mcu_regis', 'id_doctor', 'result', 'no_document', 'date')
-    search_fields = ('id_mcu_regis__id_user__email', 'id_doctor__email', 'no_document')
-    list_filter = ('result', 'date')
+    search_fields = ('id_mcu_regis__id_user__email', 'id_doctor__email', 'conclusion', 'no_document')
+    list_filter = ('result', 'conclusion', 'date')
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "id_mcu_regis":
@@ -44,9 +44,9 @@ class ResultAdmin(admin.ModelAdmin):
     def get_fields(self, request, obj=None):
         if 'add' in request.path:
             return ('id_mcu_regis', 'id_doctor', 'result', 'notes')
-        return ('id_mcu_regis', 'id_doctor', 'result', 'no_document', 'date', 'notes')
+        return ('id_mcu_regis', 'id_doctor', 'result', 'conclusion', 'no_document', 'date', 'notes')
 
     def get_readonly_fields(self, request, obj=None):
         if 'add' in request.path:
             return ()
-        return ('no_document', 'date')
+        return ('no_document', 'date', 'conclusion')
