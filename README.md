@@ -86,7 +86,14 @@ Created By Anhar Khoirun Najib (2109106081)
 ## Update Schedule
 ![screencapture-127-0-0-1-8000-mcu-dashboard-2024-10-16-18_48_24](https://github.com/user-attachments/assets/b5f4fe47-3343-48c7-8c27-1a1367a8d5dd)
 
+## User Dashboard Search
+![screencapture-127-0-0-1-8000-mcu-dashboard-2024-10-16-19_14_38](https://github.com/user-attachments/assets/68c53214-3d2b-4385-bdb5-a5548ad2ff7b)
+
+## User History Search
+<img width="959" alt="Screenshot 2024-10-16 191608" src="https://github.com/user-attachments/assets/b669d4ec-a275-4a7f-84a0-3cb8577b3546">
+
 ## User MCU History
+<img width="959" alt="Screenshot 2024-10-16 191332" src="https://github.com/user-attachments/assets/2576c1e5-c147-431f-94e5-835814fb0414">
 
 ## Doctor Dashboard
 ![screencapture-127-0-0-1-8000-doctor-dashboard-2024-10-16-18_49_26](https://github.com/user-attachments/assets/a6160995-15dc-44c6-ac41-10cd8425def6)
@@ -99,6 +106,12 @@ Created By Anhar Khoirun Najib (2109106081)
 
 ## Doctor Update MCU History
 <img width="959" alt="Screenshot 2024-10-16 185248" src="https://github.com/user-attachments/assets/cf47aabf-8615-4fdd-a43e-059cd6dd29cb">
+
+## User Dashboard Search
+<img width="959" alt="Screenshot 2024-10-16 192035" src="https://github.com/user-attachments/assets/d9561c8c-144b-45b1-be0d-a8292e43f030">
+
+## User History Search
+<img width="959" alt="Screenshot 2024-10-16 192457" src="https://github.com/user-attachments/assets/b19482f1-7f42-460d-94ed-973ea1583ec0">
 
 # How to get this project?
 *follow the command below with your terminal/cmd/git bash*
