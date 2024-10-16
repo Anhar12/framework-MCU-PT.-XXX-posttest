@@ -8,7 +8,7 @@ MCU - History
 <section class="w-100 px-4 pt-5 pt-md-3">
     <h5 class="fw-bold fs-md-4 fs-5 text-center">MCU by, dr. <span class="text-primary">{{ user.first_name }} {{ user.last_name }}</span></h5>
     <div class="d-flex w-100 justify-content-between align-items-center mt-4 mb-2 gap-3">
-        <form id="form-search" method="GET" autocomplete="off" action="{% url 'UserHistory' %}" class="d-flex align-items-center w-100">
+        <form id="form-search" method="GET" autocomplete="off" action="{% url 'DoctorHistory' %}" class="d-flex align-items-center w-100">
             <div class="form-group w-100 pe-1">
                 <input type="search" class="form-control fs-small" id="search" name="q" placeholder=" " maxlength="150" value="{{ query|default:'' }}"/>
                 <label for="search" class="form-label fs-small bg-white px-1">Search Your MCU History</label>

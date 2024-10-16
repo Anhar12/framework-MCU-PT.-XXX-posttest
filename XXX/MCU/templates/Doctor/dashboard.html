@@ -9,7 +9,7 @@ Doctor - Dashboard
     <h5 class="fw-bold fs-md-4 fs-5 text-center">Welcome, dr. <span class="text-primary">{{ user.first_name }} {{ user.last_name }}</span></h5>
 
     <div class="d-flex w-100 justify-content-between align-items-center mt-4 mb-2 gap-3">
-        <form id="form-search" method="GET" autocomplete="off" action="{% url 'UserDashboard' %}" class="d-flex align-items-center w-100">
+        <form id="form-search" method="GET" autocomplete="off" action="{% url 'DoctorDashboard' %}" class="d-flex align-items-center w-100">
             <div class="form-group w-100 pe-1">
                 <input type="search" class="form-control fs-small" id="search" name="q" placeholder=" " maxlength="150" value="{{ query|default:'' }}"/>
                 <label for="search" class="form-label fs-small bg-white px-1">Search Schedule</label>

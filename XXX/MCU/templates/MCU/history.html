@@ -44,6 +44,7 @@ MCU - History
             result: item.result,
             notes: item.notes,
             document: item.document,
+            conclusion: item.conclusion
         }));
 
         var gridOptions = {
@@ -58,7 +59,7 @@ MCU - History
                     headerName: 'Doctor',
                     field: 'doctor',
                     flex: 1,
-                    minWidth: 100
+                    minWidth: 250
                 },
                 {
                     headerName: 'Result',
@@ -66,23 +67,29 @@ MCU - History
                     width: 100
                 },
                 {
+                    headerName: 'Conclusion',
+                    field: 'conclusion',
+                    flex: 1,
+                    minWidth: 450
+                },
+                {
                     headerName: 'Notes',
                     field: 'notes',
                     flex: 1,
-                    minWidth: 150
+                    minWidth: 450
                 },
                 {
                     headerName: 'Date',
                     field: 'date',
                     flex: 1,
-                    minWidth: 150,
+                    minWidth: 250,
                     valueFormatter: formatDate
                 },
                 {
                     headerName: 'No. Document',
                     field: 'document',
                     flex: 1,
-                    minWidth: 100
+                    minWidth: 190
                 },
             ],
             defaultColDef: {

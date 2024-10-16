@@ -109,7 +109,7 @@ def UserDashboard(request):
     regis_data = Regis.objects.filter(id_user=request.user, is_done=False).order_by('date', 'no_antrean')
     query = request.GET.get('q')
     if query:
-        regis_data = Regis.objects.filter(Q(id_user=request.user) & (Q(date__icontains=query) | Q(no_antrean__icontains=query))).order_by('date', 'no_antrean')
+        regis_data = Regis.objects.filter(Q(id_user=request.user, is_done=False) & (Q(date__icontains=query) | Q(no_antrean__icontains=query))).order_by('date', 'no_antrean')
     
     regis_json = serializers.serialize('json', regis_data)
 
@@ -227,6 +227,7 @@ def UserHistory(request):
             'result': data.result,
             'notes': data.notes,
             'document': data.no_document,
+            'conclusion': data.conclusion
         })
 
     history_json = json.dumps(formatted_history_data)
@@ -247,7 +248,7 @@ def DoctorDashboard(request):
     regis_data = Regis.objects.filter(is_done=False).order_by('date', 'no_antrean')
     query = request.GET.get('q')
     if query:
-        regis_data = Regis.objects.filter(Q(date__icontains=query) | Q(no_antrean__icontains=query)).order_by('date', 'no_antrean')
+        regis_data = Regis.objects.filter(Q(is_done=False) & Q(date__icontains=query) | Q(no_antrean__icontains=query)).order_by('date', 'no_antrean')
     
     formatted_regis_data = []
     for data in regis_data:
@@ -276,13 +277,15 @@ def DoctorHistory(request):
     history_data = Result.objects.filter(id_doctor=request.user).order_by('date')
     query = request.GET.get('q')
     if query:
-        history_data = Result.objects.filter(
-            Q(date__icontains=query) | 
-            Q(id_mcu_regis__id_user__first_name__icontains=query) | 
-            Q(id_mcu_regis__id_user__last_name__icontains=query) | 
-            Q(result__icontains=query) | 
-            Q(notes__icontains=query) | 
-            Q(no_document__icontains=query)
+        history_data = Result.objects.filter( 
+            Q(id_doctor=request.user) & (
+                Q(date__icontains=query) | 
+                Q(id_mcu_regis__id_user__first_name__icontains=query) | 
+                Q(id_mcu_regis__id_user__last_name__icontains=query) | 
+                Q(result__icontains=query) | 
+                Q(notes__icontains=query) | 
+                Q(no_document__icontains=query)
+            )
         ).order_by('date')
     
     formatted_history_data = []
