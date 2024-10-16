@@ -70,6 +70,36 @@ Created By Anhar Khoirun Najib (2109106081)
 - static/MCU/images/signup-hero.png
 - static/MCU/css/custom.css
 
+# POSTTEST 4
+## Sign Up
+![screencapture-127-0-0-1-8000-sign-up-2024-10-16-18_46_23](https://github.com/user-attachments/assets/fdb93ca1-3870-4139-937a-c0b32965e364)
+
+## Sign In
+![screencapture-127-0-0-1-8000-sign-in-2024-10-16-18_46_47](https://github.com/user-attachments/assets/aad00dad-9afa-475e-bba8-23e472bb24b6)
+
+## User Dashboard
+![screencapture-127-0-0-1-8000-mcu-dashboard-2024-10-16-18_47_24](https://github.com/user-attachments/assets/378bd005-957e-4ec9-8d64-b48cf82219f3)
+
+## Create Regis Schedule MCU
+![screencapture-127-0-0-1-8000-mcu-dashboard-2024-10-16-18_47_38](https://github.com/user-attachments/assets/115db2ee-f457-4076-b025-93c416d37ad7)
+
+## Update Schedule
+![screencapture-127-0-0-1-8000-mcu-dashboard-2024-10-16-18_48_24](https://github.com/user-attachments/assets/b5f4fe47-3343-48c7-8c27-1a1367a8d5dd)
+
+## User MCU History
+
+## Doctor Dashboard
+![screencapture-127-0-0-1-8000-doctor-dashboard-2024-10-16-18_49_26](https://github.com/user-attachments/assets/a6160995-15dc-44c6-ac41-10cd8425def6)
+
+## Finish MCU
+![screencapture-127-0-0-1-8000-doctor-dashboard-2024-10-16-18_49_51](https://github.com/user-attachments/assets/c470c2c5-0875-4777-ad43-a3e5df3cf3b2)
+
+## Doctor MCU History
+<img width="959" alt="doctor history" src="https://github.com/user-attachments/assets/b04e2d62-b1cb-4984-8288-5a1faa34db2f">
+
+## Doctor Update MCU History
+<img width="959" alt="Screenshot 2024-10-16 185248" src="https://github.com/user-attachments/assets/cf47aabf-8615-4fdd-a43e-059cd6dd29cb">
+
 # How to get this project?
 *follow the command below with your terminal/cmd/git bash*
 
