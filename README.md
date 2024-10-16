@@ -113,6 +113,10 @@ Created By Anhar Khoirun Najib (2109106081)
 ## User History Search
 <img width="959" alt="Screenshot 2024-10-16 192457" src="https://github.com/user-attachments/assets/b19482f1-7f42-460d-94ed-973ea1583ec0">
 
+### Notes:
+- Using AG Grid for table
+- Using Sweet Alert for alert
+
 # How to get this project?
 *follow the command below with your terminal/cmd/git bash*
 
